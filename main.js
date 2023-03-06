@@ -30,3 +30,15 @@ form.addEventListener('submit', function(e) {
     document.querySelector('.success-message').style.display = 'none';
     }
 });
+
+campoB.addEventListener('keyup', function(e) {
+    formEValido = validarCampo(e.target.value, campoA.value);
+
+    if (!formEValido) {
+    campoB.style.border = '1px solid red';
+    document.querySelector('.error-message').style.display = 'block';
+    } else {
+    campoB.style.border = '1px solid #ccc';
+    document.querySelector('.error-message').style.display = 'none';
+    }
+});
